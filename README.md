@@ -23,7 +23,8 @@ Specifically, it includes:
 
 
 **Analysis Codes: data_analysis/**
-Each of the below codes make use of functions found in the */utils* folder
+
+Each of the scripts/notebooks below make use of functions found in the **/utils** folder
 
 *chandra/*
 
