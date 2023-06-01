@@ -8,6 +8,10 @@
 # The fitting process is parallelized using threading, allowing for efficient computation 
 # across multiple pixels. The resulting parameters and fluxes are stored in an HDF5 file 
 # for further analysis!
+
+# To run this script, in terminal type the following:
+# python gmos_fit_data.py <z_galaxy> <run>
+# z_galaxy = 0.336 and run is the nuber of your run-- can be anything
 # ------------------------------------------------------------------------------------
 
 
@@ -24,16 +28,14 @@ import threading
 
 import sys
 
-path_to_beads = '/Users/osaseomoruyi/Dropbox (Harvard University)/BeadsMultiwavelength/'
-ppxf_path = ''.join((path_to_beads, 'Analysis/gmosBeads/ppxf/'))
-gmos_path = ''.join((path_to_beads, 'Analysis/gmosBeads/reduced/'))
-
-fit_path = ''.join((ppxf_path, 'run_fit/'))
-sys.path.append(fit_path)
-
 import gmos_ppxf_singleG_SDSS as sg
 
-#sys arguments
+#Change these to match your system
+path_to_beads = '/Users/osaseomoruyi/Dropbox (Harvard University)/BeadsMultiwavelength/'
+gmos_path = ''.join((path_to_beads, 'Analysis/gmosBeads/reduced/'))
+
+#where to save the results
+save_path = ''.join((path_to_beads, '/Analysis/gmosBeads/ppxf/fit_results/result_table/'))
 
 z_galaxy = float(sys.argv[1])
 run=str(sys.argv[2])
@@ -41,8 +43,7 @@ run=str(sys.argv[2])
 # Print everything
 np.set_printoptions(threshold=np.inf, linewidth=np.nan)
 
-
-reflines = np.genfromtxt(''.join((fit_path, 'gmos_reflines_tex.dat')),names=True,dtype=None)
+reflines = np.genfromtxt(''.join((gmos_path, 'gmos_reflines_tex.dat')),names=True,dtype=None)
 
 
 # opening raw IFU data for HE0045:
@@ -137,13 +138,11 @@ print('shape of IFU fitting section: ', np.shape(INPUT))
 # Threading:
 for arg in INPUT:
 	x = threading.Thread(target=gauss_fit, args=(arg,))
-    #print(arg)
 	x.start()
 	x.join()
 
     
 # Writing the result to an hdf5 file:
-save_path = ''.join((path_to_beads, '/Analysis/gmosBeads/ppxf/fit_results/result_table/'))
 
 ofile = ''.join((save_path, '{}_ppxffit.hdf5'.format(run)))
 f = h5py.File(ofile, 'w')
