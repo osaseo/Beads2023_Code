@@ -5,7 +5,7 @@ DOI:
 This repository houses all of the codes and calculations (contained in Jupyter Python notebooks as well as simple Python scripts) associated with our recent paper publishing Chandra, GMOS and ALMA observations of the cool core brightest cluster galaxy in SDSS 1531.
 
 <div style="text-align:center;">
-    <img src="sdss_1531_summary.pdf" alt="The most beautiful galaxy cluster in the Universe: SDSS 1531 :)" width="600">
+    <embed src="sdss_1531_summary.pdf" type="application/pdf" alt="The most beautiful galaxy cluster in the Universe: SDSS 1531 :)" width="600">
 </div>
 
 
@@ -27,7 +27,7 @@ Specifically, this repository includes:
 **alma_best_imaging/moment_maps.ipynb** | These notebooks run through imaging calibrated measurement sets (generated with alma_reduce_data.py), and creates (e.g.) moment maps, a FITS cubes of the CO(3-2) data, etc. Hopefully self-explanatory.
 
 
-### Analysis Codes: data_analysis/**
+### Analysis Codes: data_analysis/
 
 Each of the scripts/notebooks below make use of functions found in the **/utils** folder
 
