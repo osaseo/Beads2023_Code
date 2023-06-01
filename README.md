@@ -4,8 +4,10 @@ DOI:
 
 This repository houses all of the codes and calculations (contained in Jupyter Python notebooks as well as simple Python scripts) associated with our recent paper publishing Chandra, GMOS and ALMA observations of the cool core brightest cluster galaxies in SDSS 1531.
 
-<object data="sdss_1531_summary.pdf" type="application/pdf" width="100%"> 
-</object>
+<div style="text-align:center;">
+    <img src="sdss_1531_summary.png" alt="The most beautiful galaxy cluster in the Universe: SDSS 1531 :)" width="100%">
+</div>
+
 
 Specifically, this repository includes:
 
