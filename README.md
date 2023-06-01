@@ -31,31 +31,31 @@ Specifically, this repository includes:
 
 Each of the scripts/notebooks below make use of functions found in the **/utils** folder
 
-*chandra/*
+**chandra/**
 
-**chandra_imaging.ipynb** | Notebook that visualizes surface brightness maps and unsharp masks created fromt he reduction stage 
+*chandra_imaging.ipynb* | Notebook that visualizes surface brightness maps and unsharp masks created fromt he reduction stage 
 
-**chandra_spectral_profiles.ipynb** | Notebook that shows how we create spectral profiles in CIAO
+*chandra_spectral_profiles.ipynb* | Notebook that shows how we create spectral profiles in CIAO
 
-**chandra_spectral_maps.ipynb** | Notebook that plots the results from ClusterPyxt
+*chandra_spectral_maps.ipynb* | Notebook that plots the results from ClusterPyxt
 
-**chandra_analysis.ipynb** | Notebook that analyzes the chandra data further
+*chandra_analysis.ipynb* | Notebook that analyzes the chandra data further
 
-*gmos/*
+**gmos/**
 
-**gmos_eline_analysis.ipynb** | Notebook that analyzes the optical emission lines from the fit GMOS IFU spectra
+*gmos_eline_analysis.ipynb* | Notebook that analyzes the optical emission lines from the fit GMOS IFU spectra
 
-*alma/*
+**alma/**
 
-**alma_gas_mass.ipynb** | Notebook showing how we fit gaussians to the extracted CO(3-2) spectra from the datacube. Note that this requires PySpecKit by Adam Ginsburg. 
+*alma_gas_mass.ipynb* | Notebook showing how we fit gaussians to the extracted CO(3-2) spectra from the datacube. Note that this requires PySpecKit by Adam Ginsburg. 
 
-**alma_poisition_velocity_diagrams.ipynb** | Notebook showing how we create PV diagrams. 
+*alma_poisition_velocity_diagrams.ipynb* | Notebook showing how we create PV diagrams. 
 
-**alma_analysis.py** | Notebook that further analyzes the ALMA data. 
+*alma_analysis.py* | Notebook that further analyzes the ALMA data. 
 
-*hst/*
+**hst/**
 
-**hst_analysis.ipynb** | Notebook that analyzes the HST data further. 
+*hst_analysis.ipynb* | Notebook that analyzes the HST data further. 
 
 
 **multi_wavelength_comparison.ipynb** | Notebook that compares the multi-wavelength data.
