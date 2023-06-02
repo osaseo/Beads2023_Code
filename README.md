@@ -1,6 +1,6 @@
 ## [Code, calculations, and notes for Omoruyi et al. 2023, ApJ]
 
-DOI:
+[![DOI](https://zenodo.org/badge/405074383.svg)](https://zenodo.org/badge/latestdoi/405074383)
 
 This repository houses all of the codes and calculations (contained in Jupyter Python notebooks as well as simple Python scripts) associated with our recent paper publishing Chandra, GMOS and ALMA observations of the cool core brightest cluster galaxies in SDSS 1531.
 
